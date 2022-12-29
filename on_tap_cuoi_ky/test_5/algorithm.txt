@@ -1,0 +1,36 @@
+1. Đảo ngược số nguyên
+*NOTE: Bỏ qua CÁC số 0 ở đầu, giữ nguyên dấu
+-Nếu hàng đơn vị là 0 -> Di chuyển đến phần tử tiếp theo
+-Tách từng chữ số ra bằng cách lần lượt chia cho 10 ^ i, đến khi nào chia mà bằng nguyên số ban đầu
+thì ngừng
++Đơn vị: bằng số ban đầu trừ đi 10 * (số ban đầu / 10)
++Chục: Chia 10
++Trăm: Chia 100...
+
+*TEST đặc biệt:
+-x là số 1 chữ số -> Chia cho 10 bằng chính nó ngay từ đầu, code không chạy
+-x là số 1 chữ số nhưng hàng đơn vị lại bằng 0
+-x có nhiều chữ số 0 liên tiếp ở cuối
+
+2. Tính tổng dãy số max (check lại lý thuyết mảng cộng dồn của Nhàn)
+max_sum = 0
+for i = 0; i < n; i++ :
+    for j = i; j < n; j++:
+        for k = i; k <= j; k++:
+            sum += a[k];
+            if sum > max_sum
+
+3. Tính thuế 
+-So với mốc cao nhất (Có thể khai báo các const bậc)
+-Tìm được mốc rồi -> Cứ nhân phần (số - mốc) với tỉ lệ tương ứng rồi cộng vào thuế  
+-Reset ban đầu thành mốc rồi cứ như thế theo các mốc tiếp theo
+-các const bậc có thể ở dưới dạng mảng 2 chiều để dùng for loop
+
+9. Sắp xếp các số trong mảng theo độ lớn phép chia dư
+-Cho dư = thằng đầu chia 0
+-Cho một biến id theo dõi thằng đang chia dư bé nhất
+10. Cộng hai số
+-Cộng hai chữ số ở hàng tương ứng
+-Cộng xong, xem phần nhỡ là bao nhiêu
+-Tương tự với hàng tiếp theo rồi cộng nhỡ vào
+
